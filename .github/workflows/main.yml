@@ -1,15 +1,18 @@
-name : Continuous Integration
-on:
-  push:
-  branches: ["main"]
+push:
+  branches:
+    -main
+pull_request:
+  branches:
+    -main
+    
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      -name: Checkout repository
+      uses: actions/checkout@v4
 
       -name: CI Check
-      run: echo "Continiuous Integration Successful"
+      run: echo "Continuous Integration Successfull"background: 
   
